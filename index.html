@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roshini Jewellers | Gold & Silver Collections</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#083B3A;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#052A28;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-family:'Cinzel',serif;
+    color:#D4AF37;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#D4AF37;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('bridal-set.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:60px;
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    margin:10px;
+    font-weight:600;
+}
+
+.gold-btn{
+    background:#D4AF37;
+    color:#083B3A;
+}
+
+.silver-btn{
+    border:2px solid #C0C0C0;
+    color:white;
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-family:'Cinzel',serif;
+    color:#D4AF37;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.about{
+    text-align:center;
+    max-width:1000px;
+    margin:auto;
+    font-size:18px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#114A47;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#D4AF37;
+    margin-bottom:10px;
+}
+
+/* SILVER SECTION */
+
+.silver-section{
+    background:#f5f5f5;
+    color:#333;
+}
+
+.silver-section .section-title{
+    color:#555;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.feature-box{
+    background:#114A47;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+/* REVIEWS */
+
+.review{
+    background:#114A47;
+    margin:20px 0;
+    padding:20px;
+    border-left:5px solid #D4AF37;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+.whatsapp{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:15px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    margin-top:20px;
+}
+
+.map-btn{
+    display:inline-block;
+    background:#D4AF37;
+    color:#083B3A;
+    padding:15px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    margin-top:20px;
+    margin-left:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#052A28;
+    text-align:center;
+    padding:30px;
+}
+
+.social a{
+    color:#D4AF37;
+    margin:0 10px;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:38px;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:10px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Roshini Jewellers</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gold">Gold</a></li>
+<li><a href="#silver">Silver</a></li>
+<li><a href="#new">New Arrivals</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<div class="hero-content">
+
+<h1>ROSHINI JEWELLERS</h1>
+
+<p>Crafting Timeless Elegance in Gold & Silver</p>
+
+<a href="#gold" class="btn gold-btn">Shop Gold</a>
+<a href="#silver" class="btn silver-btn">Shop Silver</a>
+
+</div>
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+
+<p>
+Welcome to Roshini Jewellers, your trusted destination for exquisite
+Gold and Silver jewellery in Coimbatore. We offer a carefully curated
+collection of traditional and contemporary designs crafted to celebrate
+every special moment. Quality, trust and customer satisfaction remain
+at the heart of everything we do.
+</p>
+
+</div>
+
+</section>
+
+<section id="gold">
+
+<h2 class="section-title">Gold Collection</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="C:\Users\sinuj\Downloads\WhatsApp Image 2026-06-18 at 10.48.59 AM.jpeg">
+<div class="card-content">
+<h3>Gold Bridal Sets</h3>
+<p>Traditional bridal jewellery and wedding collections.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="C:\Users\sinuj\Downloads\11.webp">
+<div class="card-content">
+<h3>Gold Earrings</h3>
+<p>Elegant traditional and modern designs.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="C:\Users\sinuj\Downloads\WhatsApp Image 2026-06-18 at 2.35.15 PM.jpeg">
+<div class="card-content">
+<h3>Gold Rings</h3>
+<p>Floral, lightweight and premium rings.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="C:\Users\sinuj\Downloads\WhatsApp Image 2026-06-18 at 10.48.06 AM.jpeg">
+<div class="card-content">
+<h3>Gold Bangles</h3>
+<p>Designer bangles and bracelets.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="silver-section" id="silver">
+
+<h2 class="section-title">Silver Collection</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src=https://www.truesilver.co.in/cdn/shop/files/1_c34c4914-efd2-4361-be4e-666dc1637153_1200x.jpg?v=1694595843>
+<div class="card-content">
+<h3>Silver Chains</h3>
+</div>
+</div>
+
+<div class="card">
+<img src="C:\Users\sinuj\Downloads\WhatsApp Image 2026-06-18 at 2.51.34 PM.jpeg">
+<div class="card-content">
+<h3>Silver Anklets</h3>
+</div>
+</div>
+
+<div class="card">
+<img src="C:\Users\sinuj\Downloads\WhatsApp Image 2026-06-18 at 2.55.21 PM.jpeg">
+<div class="card-content">
+<h3>Silver Earrings</h3>
+</div>
+</div>
+
+<div class="card">
+<img src="C:\Users\sinuj\Downloads\WhatsApp Image 2026-06-18 at 11.12.00 AM.jpeg">
+<div class="card-content">
+<h3>Silver Gift Articles</h3>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="new">
+
+<h2 class="section-title">New Arrivals</h2>
+
+<div class="features">
+
+<div class="feature-box">🌟 Latest Gold Necklaces</div>
+<div class="feature-box">🌟 Trending Silver Chains</div>
+<div class="feature-box">🌟 Designer Rings</div>
+<div class="feature-box">🌟 Bridal Collections</div>
+<div class="feature-box">🌟 Earrings Collection</div>
+<div class="feature-box">🌟 Silver Gift Sets</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Why Choose Us?</h2>
+
+<div class="features">
+
+<div class="feature-box">✓ Premium Gold & Silver Jewellery</div>
+<div class="feature-box">✓ Trusted Quality</div>
+<div class="feature-box">✓ Elegant Designs</div>
+<div class="feature-box">✓ Affordable Pricing</div>
+<div class="feature-box">✓ Customer Satisfaction</div>
+<div class="feature-box">✓ Latest Collections</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Beautiful collections and friendly service.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Best place in Coimbatore for gold and silver jewellery.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Excellent quality and attractive designs.
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+
+<img src=https://i.pinimg.com/736x/9a/14/c7/9a14c707457da7ebb51568d7c8190171.jpg>
+<img src=https://www.candere.com/media/jewellery/images/CALER116-A.jpg>
+<img src=https://i.pinimg.com/736x/13/c9/67/13c967cfd6ac3468893030081f1f0f33.jpg>
+<img src=https://i.pinimg.com/736x/09/9e/72/099e728f05a887e0bf711032b6d5d066.jpg>
+<img src=https://www.mddiamondsandjewellers.co.uk/upload/product/8049-1-WG.jpg>
+<img src=https://i.pinimg.com/1200x/d1/af/78/d1af78095ac90e90ce17885dbe53f746.jpg>
+<img src=https://silvermerc.com/cdn/shop/files/SBA22MU_93_1-1_3237ce6a-d223-4892-bfa6-df5679d65bf0.jpg?v=1695799396>
+<img src=https://i.pinimg.com/736x/37/1d/92/371d923d13622a6319404d6e65195461.jpg>
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<p><strong>Mohamed Sarjun</strong></p>
+
+<p>📞 9894074881</p>
+
+<p>
+📍 New No. 332, Shop No. 17, First Floor,
+Thirupathi Golden Plaza,
+Near Jamesha Dharga,
+Big Bazaar Street,
+Coimbatore – 641001
+</p>
+
+<p>📧 roshinijewellerscbe@gmail.com</p>
+
+<p>
+📸 Instagram:
+<a href="https://www.instagram.com/roshinijewellers10?igsh=MWtrZDZhYWdpZG5qbQ==" style="color:#D4AF37;">
+@roshinijewellers10
+</a>
+</p>
+
+<a class="whatsapp"
+href="https://wa.me/919894074881"
+target="_blank">
+WhatsApp Us
+</a>
+
+<a class="map-btn"
+href="https://maps.app.goo.gl/RDS165ScxuuVxiM76"
+target="_blank">
+View Location
+</a>
+
+</section>
+
+<footer>
+
+<div class="social">
+
+<a href="https://www.instagram.com/roshinijewellers10?igsh=MWtrZDZhYWdpZG5qbQ==">Instagram</a>
+
+</div>
+
+<br>
+
+<h3>ROSHINI JEWELLERS</h3>
+
+<p>Crafting Timeless Elegance in Gold & Silver</p>
+
+<br>
+
+<p>© 2026 Roshini Jewellers. All Rights Reserved.</p>
+
+</footer>
+</body>
+</html>
